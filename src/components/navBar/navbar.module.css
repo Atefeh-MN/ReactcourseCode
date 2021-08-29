@@ -1,0 +1,51 @@
+.navBar{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    direction: rtl;
+    height: 50px;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(212, 190, 233);
+    color: rgb(95, 19, 139);
+}
+.ul{
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+}
+li{
+    padding: 3px 10px;
+
+}
+.metaArea{
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    align-items: center;
+    
+}
+.metaDiv{
+    padding: 5px 20px 5px 0px;
+}
+.account{
+    font-size: 20px;
+   
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart span{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(184, 150, 216);
+    font-size: 18px;
+    color: rgb(63, 15, 109);
+}
