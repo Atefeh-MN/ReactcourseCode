@@ -10,6 +10,8 @@ import CounterProvider from './components/context/CounterProvider';
 import Counterone from './components/context/Counterone';
 import CounterReducer from './components/Reducer/CounterReducer';
 import CounterReducerTwo from './components/Reducer/CounterReducerTwo';
+import CounterProvider2 from './components/combineContext&reducer/CounterProvider2';
+import CounterOne2 from './components/combineContext&reducer/CounterOne2';
 
 class App extends Component {
     state = { products:[
@@ -64,12 +66,16 @@ class App extends Component {
     render() { 
         return ( 
                 <>
-                <CounterProvider>
+                <CounterProvider2>
+                <p>this is a count counter</p>
+                    <CounterOne2/>
+                </CounterProvider2>
+             {/* <CounterProvider>
                     <p>this is a count counter</p>
-                    {/* <Counterone/> */}
-                    {/* <CounterReducer/> */}
-                    <CounterReducerTwo/>
-                </CounterProvider>
+                     <Counterone/> 
+                     <CounterReducer/>
+                     <CounterReducerTwo/> 
+                </CounterProvider>   */}
             {/* <button onClick={()=>this.setState({isShow:!this.state.isShow})}>{this.state.isShow ? "Hide" :"show"}</button>
             {this.state.isShow && <FuncCleanup/>} */}
             {/* <FuncCounter/> */}
