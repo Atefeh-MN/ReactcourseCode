@@ -38,7 +38,7 @@ import { useProducts ,useProductsActions} from '../Providers/ProductsProvider';
 
 const ProductsList = (props) => {
    const products=useProducts();
-   const {removeHandler,incrementHandler,decrementHandler,changeHandler}=useProductsActions();
+   const dispatch=useProductsActions();
    const renderProduct=()=> {   
         if(products.length===0)
         return <div><h4>There is no product in carts</h4></div>
@@ -49,10 +49,10 @@ const ProductsList = (props) => {
              <Product
            key={product.id} 
            product={product}
-           onChange={(e)=>changeHandler(e,product.id)}
-           onIncrement={()=>incrementHandler(product.id)}
-           onDecrement={()=>decrementHandler(product.id)}
-             onDelete={()=>removeHandler(product.id)} />)})}
+           onChange={(e)=>dispatch({type:"edit",id:product.id,event:e})}
+           onIncrement={()=>dispatch({type:"increment",id:product.id})}
+           onDecrement={()=>dispatch({type:"decrement",id:product.id})}
+             onDelete={()=>dispatch({type:"remove",id:product.id})} />)})}
 
         </div> );
     };
