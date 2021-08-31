@@ -13,15 +13,19 @@ import Navbar from './components/navBar/Navbar';
 import ProductsList from './components/ProductsList/ProductsList';
 import Wrapper from './components/Hoc/Wrapper';
 import ProductsProvider from './components/Providers/ProductsProvider';
+import ClickCounter from './components/hocExample/ClickCounter';
+import HoverCounter from './components/hocExample/HoverCounter';
 
 const App = () => {
  
     return (
          <>
-            <ProductsProvider>
+         <ClickCounter/>
+         <HoverCounter/>
+            {/* <ProductsProvider>
             <Navbar />
             <ProductsList/>
-            </ProductsProvider>
+            </ProductsProvider> */}
             </> );
 }
  
@@ -91,39 +95,20 @@ export default  Wrapper(App,"container");
 //                 </CounterProvider>   */}
 //             {/* <button onClick={()=>this.setState({isShow:!this.state.isShow})}>{this.state.isShow ? "Hide" :"show"}</button>
 //             {this.state.isShow && <FuncCleanup/>} */}
+//             <button onClick={()=>this.setState({isShow:!this.state.isShow})}>{this.state.isShow ? "Hide" :"show"}</button>
+//             {this.state.isShow && <Classtimer/>} 
 //             {/* <FuncCounter/> */}
 //             {/* <ClassCounter/> */}
-//              <Navbar totalItem={this.state.products.filter(p=>p.quantity>0).length}/>
+//              {/* <Navbar totalItem={this.state.products.filter(p=>p.quantity>0).length}/>
 //             <ProductsList
 //             products={this.state.products}
 //             onChange={this.changeHandler}
 //             onIncrement={this.incrementHandler}
 //             onDelete={this.removeHandler}
 //             onDecrement={this.decrementHandler}/>
-              
+//                */}
 //         </> );
 //     }
 // }
  
-// export default Wrapper(App,style.container);
-// const App = () => {
-//     const [product,setProducts]=useState([
-//                 {title:'React js',price:'99 $'},
-//                 {title:'Node js',price:'89 $'},
-//                 {title:'Javascript',price:'79 $'}
-//         ])
-//     const clickHandler=()=>{
-//         setProducts([
-//         {title:'React js',price:'89 $'},
-//         {title:'Node js',price:'79 $'},
-//         {title:'Javascript',price:'69 $'}])
-//     }
-//     return (<div>
-//                    <h1>Shopping App </h1>
-//                   {product.map(product=>{
-//                  return(<Product name={product.title} price={product.price}/>)})}
-//                  <button onClick={clickHandler}>change price</button>
-//           </div>);
-// }
- 
-// export default App;
+// // export default Wrapper(App,"container");
