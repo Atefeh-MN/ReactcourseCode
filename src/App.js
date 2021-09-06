@@ -14,6 +14,7 @@ import ProductsList from './components/ProductsList/ProductsList';
 import Wrapper from './components/Hoc/Wrapper';
 import ProductsProvider from './components/Providers/ProductsProvider';
 import FunctionalRef from './components/ref/FunctinalRef';
+import UseRefExample from './components/ref/UserefExample';
 
 
 const App = () => {
@@ -21,8 +22,8 @@ const App = () => {
     return (
          <>
     
-         <FunctionalRef/>
-
+        
+            <UseRefExample/>
              {/* <ProductsProvider>
             <Navbar />
             <ProductsList/>
