@@ -13,20 +13,19 @@ import Navbar from './components/navBar/Navbar';
 import ProductsList from './components/ProductsList/ProductsList';
 import Wrapper from './components/Hoc/Wrapper';
 import ProductsProvider from './components/Providers/ProductsProvider';
-import ClickCounter from './components/hocExample/ClickCounter';
-import HoverCounter from './components/hocExample/HoverCounter';
+import parentComp from './components/pureMemocomponent/parentComp';
 
 const App = () => {
  
     return (
          <>
-         <ClickCounter/>
-         <HoverCounter/>
-            {/* <ProductsProvider>
+         <parentComp/>
+             {/* <ProductsProvider>
             <Navbar />
             <ProductsList/>
-            </ProductsProvider> */}
-            </> );
+            </ProductsProvider>  */}
+        </> 
+            );
 }
  
 export default  Wrapper(App,"container");
