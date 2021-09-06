@@ -13,13 +13,13 @@ import Navbar from './components/navBar/Navbar';
 import ProductsList from './components/ProductsList/ProductsList';
 import Wrapper from './components/Hoc/Wrapper';
 import ProductsProvider from './components/Providers/ProductsProvider';
-import parentComp from './components/pureMemocomponent/parentComp';
+
 
 const App = () => {
  
     return (
          <>
-         <parentComp/>
+         
              {/* <ProductsProvider>
             <Navbar />
             <ProductsList/>

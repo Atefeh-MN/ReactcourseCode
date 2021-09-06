@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 class RegComp extends Component {
     
     render() { 
-        console.log(RegComp);
+        console.log("RegComp");
         return ( 
             <div>
-                RegComp -{this.props.name}
+                reg  Comp -{this.props.name}
             </div>
          );
     }
