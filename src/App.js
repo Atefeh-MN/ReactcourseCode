@@ -13,21 +13,16 @@ import Navbar from './components/navBar/Navbar';
 import ProductsList from './components/ProductsList/ProductsList';
 import Wrapper from './components/Hoc/Wrapper';
 import ProductsProvider from './components/Providers/ProductsProvider';
-import FunctionalRef from './components/ref/FunctinalRef';
-import UseRefExample from './components/ref/UserefExample';
 
 
 const App = () => {
  
     return (
          <>
-    
-        
-            <UseRefExample/>
-             {/* <ProductsProvider>
+            <ProductsProvider>
             <Navbar />
             <ProductsList/>
-            </ProductsProvider>  */}
+            </ProductsProvider>  
         </> 
             );
 }
