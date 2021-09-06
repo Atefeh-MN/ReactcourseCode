@@ -13,13 +13,14 @@ import Navbar from './components/navBar/Navbar';
 import ProductsList from './components/ProductsList/ProductsList';
 import Wrapper from './components/Hoc/Wrapper';
 import ProductsProvider from './components/Providers/ProductsProvider';
+import ClassRef from './components/ref/ClassRef';
 
 
 const App = () => {
  
     return (
          <>
-         
+         <ClassRef/>
              {/* <ProductsProvider>
             <Navbar />
             <ProductsList/>
