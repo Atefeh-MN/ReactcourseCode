@@ -1,0 +1,20 @@
+.formControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.formControl input{
+    outline: none;
+    border: 1px solid #5B21B6;
+    border-radius: 5px;
+    padding:8px 3px;
+    color: #5B21B6;
+    width: 300px;
+    margin-left: 1rem;
+}
+.formControl input:focus{
+    border: 2px solid #5B21B6;
+}

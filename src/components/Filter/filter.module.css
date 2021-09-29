@@ -4,17 +4,5 @@
     margin: 20px;
     justify-content: space-between;
     align-items: center;
-    width: 50rem;
-}
-.selectContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.selectContainer span{
-    display: block;
-    margin-right: 1rem;
-}
-.select{
-     width: 200px;
+    width: 60rem;
 }

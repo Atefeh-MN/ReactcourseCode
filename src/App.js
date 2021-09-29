@@ -16,12 +16,14 @@ import ProductsProvider from './components/Providers/ProductsProvider';
 import Filter from './components/Filter/Filter';
 
 
+
 const App = () => {
  
     return (
          <>
             <ProductsProvider>
             <Navbar />
+            
             <Filter/>
             <ProductsList/>
             </ProductsProvider>  
