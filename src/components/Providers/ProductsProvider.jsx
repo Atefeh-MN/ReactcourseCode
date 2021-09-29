@@ -1,15 +1,18 @@
 import React from "react";
 import { useContext,useReducer} from "react"; 
+import { productsData } from './../../db/products';
+import _ from 'lodash'
+
 
 
 const ProductsContext=React.createContext();
 const ProductsContextDispatcher=React.createContext();
-const initialState=[
-    {title:'React js',price:'99 $',id:1 ,quantity:1},
-    {title:'Node js',price:'89 $',id:2,quantity:2},
-    {title:'Javascript',price:'79 $',id:3,quantity:3}
-];
-const reducer= (state = initialState, action) => {
+// const initialState=[
+//     {title:'React js',price:'99 $',id:1 ,quantity:1},
+//     {title:'Node js',price:'89 $',id:2,quantity:2},
+//     {title:'Javascript',price:'79 $',id:3,quantity:3}
+// ];
+const reducer= (state, action) => {
     switch (action.type) {
         case "increment":
           {  const index=state.findIndex(item=>item.id===action.id);
@@ -41,13 +44,30 @@ const reducer= (state = initialState, action) => {
         const updatedProducts=[...state];
         updatedProducts[index]=product;
             return updatedProducts;}
+        case 'filter':{
+            // console.log(action.event.target.value)
+            const value=action.selectOption.value;
+            if(value===""){
+                return productsData;
+            }else{
+                const updatedProducts=productsData.filter(p=>p.category===value)
+            return updatedProducts;}}
+        case 'sort':{
+            const value=action.selectOption.value
+            const products=[...state];
+            if(value==="lowest"){
+                return _.orderBy(products, ['price'],['asc']);
+            }else{
+                return _.orderBy(products, ['price'],['desc']);
+            }
+        }
         default:
             return state;
     }
 };
 
 const ProductsProvider = ({children}) => {
-    const [products,dispatch]=useReducer(reducer,initialState );
+    const [products,dispatch]=useReducer(reducer,productsData );
     return ( 
         <ProductsContext.Provider value={products}>
             <ProductsContextDispatcher.Provider value={dispatch}>
